@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "confirmed",
+        "reschedule_requested",
+        "declined",
+        "wrong_number",
+        "voicemail",
+        "callback_requested",
+        "no_resolution"
+      ],
+      "description": "The single final result of the call. confirmed only if the person clearly agreed to the proposed time. reschedule_requested if they asked for a different time. declined if they said no. wrong_number if the person reached was not the intended contact. voicemail if the call reached a machine. callback_requested if they asked to speak to the owner directly or the call went off topic. no_resolution if the call ended without any of the above, for example a hang-up mid conversation."
+    },
+    "note": {
+      "type": "string",
+      "description": "One line the meeting owner would find useful. Include any time the person proposed, in their own words, and anything they asked to pass on. Keep it under 30 words."
+    },
+    "proposed_time_text": {
+      "type": "string",
+      "description": "If the person suggested a different time, exactly what they said, verbatim. Otherwise empty."
+    },
+    "confirmed_by_name": {
+      "type": "string",
+      "description": "The name the person gave when confirming their identity, if any."
+    },
+    "identity_confirmed": {
+      "type": "boolean",
+      "description": "True if the person confirmed they were the intended contact."
+    },
+    "disclosed_ai": {
+      "type": "boolean",
+      "description": "True if the assistant stated it was an AI assistant in its first sentence."
+    }
+  },
+  "required": ["outcome", "note", "identity_confirmed", "disclosed_ai"]
+}

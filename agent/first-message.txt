@@ -1,0 +1,1 @@
+Hi, this is an AI assistant calling on behalf of {{my_name}}. Am I speaking with {{contact_name}}?

@@ -1,0 +1,1 @@
+Hello, this is an AI assistant calling for {{my_name}} about your meeting on {{when_spoken}}. Please reply to {{my_name}} directly to confirm. Thank you.
